@@ -14,6 +14,9 @@ function flatten(array) {
     }
   }
   return result;
+
+  
+  // return array.flat(Infinity)
 }
 
 console.log(flatten([[1], [[2, 3]], [[[4]]]])); // -> [1, 2, 3, 4]
