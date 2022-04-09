@@ -8,9 +8,8 @@ function isUnique(string) {
   // return true
 
   // refactoring
-  const strUnique = new Set (string)
-  if (string.length !== strUnique.size) return false
-  return true
+
+  return new Set(string).size === string.length
 }
 
 console.log(isUnique('abcdef')) // -> true
