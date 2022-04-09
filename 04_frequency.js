@@ -2,7 +2,7 @@
 function highestFrequency(array) {
   const map = {};
   let max = 0;
-  let highFrequency;
+  let highFrequency = array[0];
   for (let i = 0; i < array.length; i++) {
     const char = array[i];
     if (map[char]) { //map[char] is a value in obj
@@ -12,7 +12,7 @@ function highestFrequency(array) {
     }
     if (map[char] > max) {
       max = map[char];
-      highFrequency = array[i];
+      highFrequency = char;
     }
   }
   return highFrequency;
