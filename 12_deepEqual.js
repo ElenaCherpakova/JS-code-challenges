@@ -22,6 +22,7 @@ function deepEqual(a, b) {
   return true;
 }
 
+
 const source = { a: 1, b: { c: 1 } };
 const test1 = { a: 1, b: { c: 1 } };
 const test2 = { a: 1, b: { c: 2 } };
