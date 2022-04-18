@@ -9,11 +9,11 @@
 // #  return the sum of that row. For example: if num is 4 then your 
 // # program should return the sum of 1 + 4 + 6 + 4 + 1 which is 16.  
 
-function TriangleRow(num){
-  if (num === 0){
+function TriangleRow(num) {
+  if (num === 0) {
     return 1
-  }else 
-  return Math.pow(2, num)
+  } else
+    return Math.pow(2, num)
 }
 console.log(TriangleRow(2))  // -> 4
 console.log(TriangleRow(10)) // ->1024
