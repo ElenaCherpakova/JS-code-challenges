@@ -1,4 +1,4 @@
-//create an poll object
+//create a poll object
 //Based on input number, update the "answer" array property.For example, if the option is 3 increase the value at 3 of the array by one.
 const poll = {
   question: "What is your favorite programming language?",
@@ -9,7 +9,7 @@ const poll = {
     const answer = Number(prompt(`${this.question}\n${this.options.join("\n")}\n(Write option number)`));
 
     //Register
-    typeof answer === 'number' && answer.length < this.answers.length && this.answers[answer]++
+    typeof answer === 'number' && answer.length < this.answers.length && this.answers[answer]++;
     this.displayResults()
   },
   displayResults: function (type = 'array') {
