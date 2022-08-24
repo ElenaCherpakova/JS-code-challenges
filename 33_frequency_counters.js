@@ -2,7 +2,7 @@
 The function should return true if every value in the array has it's corresponding values squared in the second array. The frequency of values mush be the same */
 
 function same(arr1, arr2) {
-  if (arr1.length != arr2.length) {
+  if (arr1.length !== arr2.length) {
     return false;
   }
   for (let num of arr1) {
