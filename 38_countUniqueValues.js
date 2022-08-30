@@ -11,7 +11,6 @@ function countUniqueValues(array) {
   }
   return i + 1;
 }
-
 // liner solution
 function countUniqueValues(array){
   return new Set(array).size;
