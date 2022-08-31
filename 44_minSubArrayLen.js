@@ -2,29 +2,44 @@
 
 This function should return the minimal length of a contiguous subarray of which the sum is greater than or equal to the integer passed to the function. If there isn't one, return 0 instead.*/
 
-function minSubArrayLen(arr, target) {
-  let sum = 0;
-  let right = 0;
-  let left = 0;
-  let minLen = Infinity;
+// function minSubArrayLen(arr, target) {
+//   let sum = 0;
+//   let right = 0;
+//   let left = 0;
+//   let minLen = Infinity;
 
-  while (left < arr.length) {
-    // if current window doesn't add up to the given sum then 
-    // move the window to right
-    if (sum < target && right < arr.length) {
-      sum += arr[right];
-      right++;
-    }
-    // if current window adds up to at least the sum given then
-    // we can shrink the window 
-    else if (sum >= target) {
-      minLen = Math.min(minLen, right - left);
+//   while (left < arr.length) {
+//     // if current window doesn't add up to the given sum then 
+//     // move the window to right
+//     if (sum < target && right < arr.length) {
+//       sum += arr[right];
+//       right++;
+//     }
+//     // if current window adds up to at least the sum given then
+//     // we can shrink the window 
+//     else if (sum >= target) {
+//       minLen = Math.min(minLen, right - left);
+//       sum -= arr[left];
+//       left++;
+//     }
+//     // current total less than required total but we reach the end, need this or else we'll be in an infinite loop 
+//     else {
+//       break;
+//     }
+//   }
+//   return minLen === Infinity ? 0 : minLen;
+// }
+
+function minSubArrayLen(arr, target){
+  let minLen = Infinity;
+  let sum = 0;
+  let left = 0;
+  for (let i = 0; i < arr.length; i++){
+    sum += arr[i];
+    while (sum >= target){
+      minLen = Math.min(minLen, i - left + 1);
       sum -= arr[left];
       left++;
-    }
-    // current total less than required total but we reach the end, need this or else we'll be in an infinite loop 
-    else {
-      break;
     }
   }
   return minLen === Infinity ? 0 : minLen;
