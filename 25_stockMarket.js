@@ -7,12 +7,10 @@
 //       array[midNumber]++
 //     }else if(array[i] < array[midNumber])
 //     array[i]++
-  
+
 // }
 // return output
 // }
-
-
 
 // const minOfArr = arr => arr.reduce((acc,x) => acc <= x ? x : x, arr[0]);
 // console.log(minOfArr([45, 24, 35, 31, 40, 38, 11]))
@@ -24,11 +22,10 @@
 // min [24, ]
 // max [45, ]
 
-
-const arr = [45, 24, 35, 31, 40, 38, 11]
-const mid = Math.floor(arr.length/2)
-console.log(mid)
-const left = arr.slice(0, 4)
-const right = arr.slice(4, arr.length)
-console.log(left)
-console.log(right)
+const arr = [45, 24, 35, 31, 40, 38, 11];
+const mid = Math.floor(arr.length / 2);
+console.log(mid);
+const left = arr.slice(0, 4);
+const right = arr.slice(4, arr.length);
+console.log(left);
+console.log(right);
