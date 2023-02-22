@@ -6,7 +6,7 @@ function polishNotation(expression) {
     const numberEl = Number(el);
 
     if (!isNaN(numberEl)) {
-      stack.push(el);
+      stack.push(numberEl);
       continue;
     }
     const firstEl = stack.pop();
@@ -14,16 +14,16 @@ function polishNotation(expression) {
 
     switch (el) {
       case '+':
-        stack.push(Number(firstEl) + Number(secondEl));
+        stack.push(firstEl + secondEl);
         break;
       case '-':
-        stack.push(Number(firstEl) - Number(secondEl));
+        stack.push(firstEl - secondEl);
         break;
       case '*':
-        stack.push(Number(firstEl) * Number(secondEl));
+        stack.push(firstEl * secondEl);
         break;
       case '/':
-        stack.push(Number(firstEl) / Number(secondEl));
+        stack.push(firstEl / secondEl);
         break;
       default:
         break;
