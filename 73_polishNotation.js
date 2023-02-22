@@ -29,7 +29,7 @@ function polishNotation(expression) {
         break;
     }
   }
-  return stack.pop();
+  return stack[0];
 }
 
 console.log(polishNotation('+ 3 5'), 8);
