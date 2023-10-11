@@ -1,3 +1,15 @@
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} list1
+ * @param {ListNode} list2
+ * @return {ListNode}
+ */
 var mergeTwoLists = function (list1, list2) {
   let list = new ListNode();
   let head = list;
@@ -19,3 +31,5 @@ var mergeTwoLists = function (list1, list2) {
 
   return head.next;
 };
+
+console.log(mergeTwoLists([1, 2, 4], [1, 3, 4]));

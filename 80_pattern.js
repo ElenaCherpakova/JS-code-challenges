@@ -12,7 +12,7 @@ function pattern(n) {
   return output.trim();
 }
 
-console.log(pattern(1));
+console.log(pattern(3));
 console.log("=======")
 console.log(pattern(2));
 console.log("=======")

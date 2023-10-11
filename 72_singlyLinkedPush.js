@@ -28,3 +28,5 @@ const list = new SinglyLinkedList();
 console.log({ list });
 list.push(2);
 console.log({ list });
+list.push(3);
+console.log({ list });

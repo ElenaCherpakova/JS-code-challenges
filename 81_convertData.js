@@ -13,3 +13,4 @@ const convertedData = listOfReceivedData.reduce((acc, cur) => {
   acc[cur.type].push(cur.data);
   return acc;
 }, {});
+console.log(convertedData);
