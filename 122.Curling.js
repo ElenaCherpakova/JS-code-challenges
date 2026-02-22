@@ -63,9 +63,8 @@ function scoreCurling(house) {
     } else if (min_yellow < min_red) {
         const scoreYellow = yellow.filter(num => num < min_red).length;
         return `Y: ${scoreYellow}`;
-    } else {
-        return `No points awarded`;
     }
+    return `No points awarded`;
 }
 
 
