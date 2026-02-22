@@ -53,7 +53,7 @@ function scoreCurling(house) {
             else if (cell === 'Y') yellow.push(matrix[i][j]);
         }
     };
-    if (red.length === 0 && yellow.length) return 'No points awarded';
+    if (red.length === 0 && yellow.length === 0) return 'No points awarded';
     const min_red = red.length ? Math.min(...red) : Infinity;
     const min_yellow = yellow.length ? Math.min(...yellow) : Infinity;
 
